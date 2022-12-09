@@ -12,6 +12,8 @@ class InitProjectPage extends StatelessWidget {
     _controller = services<InitProjectBloc>();
   }
 
+  static const String route = '/';
+
   @override
   Widget build(BuildContext context) {
     return ScaffoldPage(
@@ -56,7 +58,7 @@ class InitProjectPage extends StatelessWidget {
                             ),
                           ),
                           onPressed: () => _controller.add(
-                            OpenNewProjectEvent(),
+                            OpenNewProjectEvent(context: context),
                           ),
                         ),
                         const SizedBox(height: 16),

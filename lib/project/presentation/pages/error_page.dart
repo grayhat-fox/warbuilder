@@ -9,6 +9,8 @@ class ErrorPage extends StatelessWidget {
     this.errorDescription,
   });
 
+  static const String route = '/error';
+
   @override
   Widget build(BuildContext context) {
     return ScaffoldPage(

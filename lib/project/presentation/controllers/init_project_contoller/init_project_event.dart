@@ -7,6 +7,12 @@ abstract class InitProjectEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class OpenNewProjectEvent extends InitProjectEvent {}
+class OpenNewProjectEvent extends InitProjectEvent {
+  final BuildContext context;
 
-class OpenSavedProjectEvent extends InitProjectEvent {}
+  const OpenNewProjectEvent({required this.context});
+}
+
+class OpenSavedProjectEvent extends InitProjectEvent {
+  const OpenSavedProjectEvent();
+}
