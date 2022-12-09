@@ -7,6 +7,6 @@ abstract class InitProjectState extends Equatable {
   List<Object> get props => [];
 }
 
-class InitProjectInProgress extends InitProjectState {}
+class InitProjectInProgressState extends InitProjectState {}
 
-class InitProjectMenu extends InitProjectState {}
+class InitProjectMenuState extends InitProjectState {}

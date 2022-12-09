@@ -5,7 +5,7 @@ part 'init_project_event.dart';
 part 'init_project_state.dart';
 
 class InitProjectBloc extends Bloc<InitProjectEvent, InitProjectState> {
-  InitProjectBloc() : super(InitProjectMenu()) {
+  InitProjectBloc() : super(InitProjectMenuState()) {
     on<InitProjectEvent>((event, emit) {});
   }
 }
