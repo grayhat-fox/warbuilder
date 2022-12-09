@@ -19,7 +19,7 @@ class Application extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (context) => InitProjectBloc(),
-        child: const InitProjectPage(),
+        child: InitProjectPage(),
       ),
     );
   }

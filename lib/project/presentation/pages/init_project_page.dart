@@ -1,11 +1,16 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:warbuilder/core/injector.dart';
 import 'package:warbuilder/project/presentation/controllers/init_project_contoller/init_project_bloc.dart';
 import 'package:warbuilder/project/presentation/pages/error_page.dart';
 import 'package:warbuilder/project/presentation/widgets/center_loading_widget.dart';
 
 class InitProjectPage extends StatelessWidget {
-  const InitProjectPage({Key? key}) : super(key: key);
+  late final InitProjectBloc _controller;
+
+  InitProjectPage({Key? key}) : super(key: key) {
+    _controller = services<InitProjectBloc>();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +18,7 @@ class InitProjectPage extends StatelessWidget {
       padding: EdgeInsets.zero,
       content: SizedBox.expand(
         child: BlocBuilder<InitProjectBloc, InitProjectState>(
+          bloc: _controller,
           builder: (context, state) {
             if (state is InitProjectInProgressState) {
               return const CenterLoadingWidget();
