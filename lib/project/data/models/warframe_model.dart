@@ -16,7 +16,7 @@ class WarframeModel extends Warframe {
     required super.stamina,
   });
 
-  factory WarframeModel.fromJSON() {
+  factory WarframeModel.fromJSON(Map data) {
     throw UnimplementedError();
   }
 }
