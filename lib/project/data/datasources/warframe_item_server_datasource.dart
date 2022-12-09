@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+import 'package:warbuilder/core/failures/failure.dart';
 import 'package:warbuilder/project/domain/entities/warframe.dart';
 
 abstract class WarframeItemServerDatasource {
@@ -16,8 +18,14 @@ class LocalWarframeItemServerDatasource extends WarframeItemServerDatasource {
   });
 
   @override
-  Future<List<Warframe>> _updateWarframesData() {
-    // TODO: implement _updateWarframesData
-    throw UnimplementedError();
+  Future<List<Warframe>> _updateWarframesData() async {
+    try {
+      final response = await Dio().get(server);
+      //! Implement get logic
+
+      throw UnimplementedError();
+    } catch (e) {
+      throw const Failure();
+    }
   }
 }
