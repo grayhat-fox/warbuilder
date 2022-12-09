@@ -6,3 +6,7 @@ abstract class InitProjectEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class OpenNewProjectEvent extends InitProjectEvent {}
+
+class OpenSavedProjectEvent extends InitProjectEvent {}

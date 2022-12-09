@@ -55,7 +55,9 @@ class InitProjectPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          onPressed: () => null,
+                          onPressed: () => _controller.add(
+                            OpenNewProjectEvent(),
+                          ),
                         ),
                         const SizedBox(height: 16),
                         FilledButton(
@@ -71,7 +73,9 @@ class InitProjectPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          onPressed: () => null,
+                          onPressed: () => _controller.add(
+                            OpenSavedProjectEvent(),
+                          ),
                         ),
                       ],
                     ),
