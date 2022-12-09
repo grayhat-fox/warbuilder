@@ -1,3 +1,4 @@
+import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:warbuilder/core/injector.dart';
@@ -17,8 +18,13 @@ class InitProjectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScaffoldPage(
-      padding: EdgeInsets.zero,
-      content: SizedBox.expand(
+      header: SizedBox.shrink(),
+      // header: WindowTitleBarBox(
+      //   child: MoveWindow(),
+      // ),
+      content: Container(
+        padding: const EdgeInsets.all(16.0),
+        color: FluentTheme.of(context).scaffoldBackgroundColor.withOpacity(1.0),
         child: BlocBuilder<InitProjectBloc, InitProjectState>(
           bloc: _controller,
           builder: (context, state) {

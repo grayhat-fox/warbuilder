@@ -1,4 +1,3 @@
-import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:warbuilder/core/injector.dart';
 import 'package:warbuilder/project/presentation/application.dart';
@@ -7,13 +6,5 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initServices();
 
-  runApp(const Application());
-
-  doWhenWindowReady(() {
-    const initialSize = Size(600, 450);
-    appWindow.minSize = initialSize;
-    appWindow.size = initialSize;
-    appWindow.alignment = Alignment.center;
-    appWindow.show();
-  });
+  runApp(Application());
 }

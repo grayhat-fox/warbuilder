@@ -1,4 +1,3 @@
-import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:fluent_ui/fluent_ui.dart';
@@ -15,10 +14,6 @@ class InitProjectBloc extends Bloc<InitProjectEvent, InitProjectState> {
       '/project',
       (route) => false,
     );
-
-    doWhenWindowReady(() {
-      appWindow.maximize();
-    });
   }
 
   InitProjectBloc() : super(InitProjectMenuState()) {

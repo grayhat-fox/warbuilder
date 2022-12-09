@@ -1,5 +1,4 @@
 import 'package:fluent_ui/fluent_ui.dart';
-import 'package:warbuilder/project/presentation/style/accent_colors.dart';
 
 class ErrorPage extends StatelessWidget {
   final String? errorDescription;
@@ -21,7 +20,7 @@ class ErrorPage extends StatelessWidget {
           children: [
             Icon(
               FluentIcons.error,
-              color: getAccentColor('normal'),
+              color: FluentTheme.of(context).accentColor,
             ),
             const SizedBox(height: 16),
             Text(
