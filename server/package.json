@@ -1,0 +1,12 @@
+{
+  "name": "warbuilder-server",
+  "version": "1.0.0",
+  "description": "WarBuilder Scraper Server",
+  "main": "server.js",
+  "scripts": {},
+  "author": "grayhat.fox",
+  "license": "MIT",
+  "dependencies": {
+    "warframe-items": "^1.1258.10"
+  }
+}
