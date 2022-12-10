@@ -1,1 +1,7 @@
-enum Focus { madurai, vazarin, naramon, unairu, zenurik }
+enum Focus {
+  madurai,
+  vazarin,
+  naramon,
+  unairu,
+  zenurik,
+}

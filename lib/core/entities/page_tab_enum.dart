@@ -1,0 +1,16 @@
+enum PageTab {
+  warframe,
+  primary,
+  secondary,
+  melee,
+  companion,
+  cWeapon,
+  archwing,
+  archgun,
+  necramech,
+  nWeapon,
+  nMelee,
+  shards,
+  equips,
+  parazon,
+}
