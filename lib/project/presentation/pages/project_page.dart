@@ -6,8 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:warbuilder/core/entities/page_tab_enum.dart';
 import 'package:warbuilder/core/injector.dart';
 import 'package:warbuilder/project/presentation/controllers/project_controller/project_bloc.dart';
-import 'package:warbuilder/project/presentation/pages/warframe_page.dart';
-import 'package:warbuilder/project/presentation/widgets/center_loading_widget.dart';
+import 'package:warbuilder/project/presentation/pages/modules/warframe_module_widget.dart';
 
 class ProjectPage extends StatelessWidget {
   late final ProjectBloc _controller;
@@ -55,7 +54,7 @@ class ProjectPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  body: const WarframePage(),
+                  body: const WarframeModuleWidget(),
                 ),
                 PaneItem(
                   icon: const Icon(FluentIcons.contact),
